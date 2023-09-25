@@ -5,6 +5,7 @@ class Customer:
 
     def full_name(self):
         return f"{self.first_name} {self.family_name}"
+    # f-strings(フォーマル文字列リテラル)は、文字列内に変数や式を変数や式を埋め込むために使われる。
     
 
 ken = Customer(first_name="Ken", family_name="Tanaka")
@@ -15,4 +16,3 @@ print(ken.full_name())
 tom = Customer(first_name="Tom", family_name="Ford")
 tom.full_name()  # "Tom Ford" という値を返す
 print(tom.full_name())
-

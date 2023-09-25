@@ -14,25 +14,21 @@ class Customer:
             print(1500)
         elif 65 <= self.age:
             print(1200)
-    
+
     def info_csv(self):
-        if self.age < 20:
-            return f"{self.first_name} {self.family_name}"
+        
     
 
 ken = Customer(first_name="Ken", family_name="Tanaka", age=15)
-ken.full_name()  # "Ken Tanaka" という値を返す
-ken.age  # 15 という値を返す
-print(ken.entry_fee())
+ken.info_csv()  # "Tom Ford,57,1500" という値を返す
+print(ken.info_csv())
 
 
 tom = Customer(first_name="Tom", family_name="Ford", age= 57)
-tom.full_name()  # "Tom Ford" という値を返す
-tom.age  # 57 という値を返す
-print(tom.entry_fee())
+tom.info_csv()  # "Tom Ford,57,1500" という値を返す
+print(tom.info_csv())
 
 
 ieyasu = Customer(first_name="Ieyasu", family_name="Tokugawa", age=73)
-ieyasu.full_name()  # "Tokugawa Ieyasu"という値を返す
-ieyasu.age  # 73 という値を返す
-print(ieyasu.entry_fee())
+ieyasu.info_csv()  # "Ieyasu Tokugawa,73,1200" という値を返す
+print(ieyasu.info_csv())
