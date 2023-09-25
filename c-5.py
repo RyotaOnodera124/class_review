@@ -8,7 +8,9 @@ class Customer:
         return f"{self.first_name} {self.family_name}"
     
     def entry_fee(self):
-        if self.age < 20:
+        if self.age <= 3:
+            return "無料"
+        elif 3 < self.age < 20:
             return 1000
         elif 20 <= self.age <= 65:
             return 1500
@@ -22,7 +24,7 @@ class Customer:
   
 
 ken = Customer(first_name="Ken", family_name="Tanaka", age=15)
-ken.info_csv()  # "Tom Ford,57,1500" という値を返す
+ken.info_csv()  # "Ken Tanaka,15,1500" という値を返す
 
 
 tom = Customer(first_name="Tom", family_name="Ford", age= 57)
@@ -32,5 +34,5 @@ tom.info_csv()  # "Tom Ford,57,1500" という値を返す
 ieyasu = Customer(first_name="Ieyasu", family_name="Tokugawa", age=73)
 ieyasu.info_csv()  # "Ieyasu Tokugawa,73,1200" という値を返す
 
-
-# returnは関数(メソッド)から値を返すために使う、その関数が計算した結果や値を他の部分で使えるようにする
+johnny = Customer(first_name="Johnny", family_name="Depp", age=2)
+johnny.info_csv()  # "Jonny Depp,2,無料" という値を返す
